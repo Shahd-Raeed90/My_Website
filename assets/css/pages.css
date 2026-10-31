@@ -1,0 +1,763 @@
+/* تنسيق عام للصفحات الداخلية */
+
+/* عنوان الصفحات الداخلية */
+.page-banner {
+  background: linear-gradient(110deg,#102d4c,#205982);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* زخرفة خلف عنوان الصفحات الداخلية */
+.page-banner:after {
+  content: '✧';
+  font-size: 290px;
+  color: rgba(149,220,220,.10);
+  position: absolute;
+  left: 3%;
+  top: -110px;
+  pointer-events: none;
+}
+
+.page-banner-inner {
+  min-height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-banner-inner>div:first-child {
+  max-width: 750px;
+}
+
+.banner-overline {
+  font-size: 13px;
+  color: #8eead7;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.page-banner h1 {
+  font-size: clamp(30px,4vw,45px);
+  font-weight: 800;
+  line-height: 1.4;
+  margin: 0 0 13px;
+}
+
+.page-banner p {
+  color: #dbe8f1;
+  font-size: 14px;
+  line-height: 2;
+  margin: 0;
+}
+
+.banner-decoration {
+  font-size: 130px;
+  color: rgba(143,224,212,.28);
+  font-family: serif;
+  line-height: 1;
+}
+
+.inner-section {
+  padding: 60px 0;
+}
+
+.inner-section h2 {
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.section-heading.compact {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: #294360;
+  margin-bottom: 7px;
+}
+
+/* توحيد مظهر حقول البحث والقوائم والنماذج */
+.form-control,.form-select {
+  min-height: 45px;
+  border: 1px solid #d8e3ef;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--text);
+}
+
+/* تمييز حقل الإدخال عند التركيز عليه */
+.form-control:focus,.form-select:focus {
+  border-color: #4c93bd;
+  box-shadow: 0 0 0 .22rem rgba(43,131,183,.13);
+}
+
+.form-control::placeholder {
+  color: #96a6b8;
+}
+
+.field-hint {
+  font-size: 11px;
+  color: var(--muted);
+  display: block;
+  margin-top: 7px;
+}
+
+/* البحث والتصفية */
+.filter-section {
+  padding-bottom: 22px;
+}
+
+.filter-panel {
+  background: #fff;
+  padding: 27px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+/* أزرار البحث وإعادة ضبط الفلاتر */
+.filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.button-ghost {
+  border: 1px solid #c9dfeb;
+  color: var(--navy);
+  background: #f0f7fc;
+  cursor: pointer;
+}
+
+.button-ghost:hover {
+  background: #e0eff9;
+  color: var(--navy);
+}
+
+.button-outline {
+  border: 1px solid #accfe1;
+  color: var(--navy);
+  background: #fff;
+  cursor: pointer;
+}
+
+.button-outline:hover {
+  background: #edf7fc;
+  color: var(--navy);
+}
+
+/* نتائج الفعاليات */
+.listing-section {
+  padding-top: 23px;
+}
+
+.list-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.list-head h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+/* توضيح عدد الفعاليات الظاهرة بعد الفلترة */
+.result-count {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--navy);
+  background: #e8f3fa;
+  border-radius: 99px;
+  padding: 9px 16px;
+  margin: 0;
+}
+
+/* رسالة تظهر عندما لا توجد نتائج تطابق شروط البحث */
+.empty-state {
+  border: 1px dashed #b0cadd;
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 22px;
+}
+
+.empty-icon {
+  font-size: 50px;
+  color: #82aac0;
+  line-height: 1;
+}
+
+.empty-state h3 {
+  color: var(--navy);
+  font-size: 21px;
+  font-weight: 800;
+  margin: 16px 0 5px;
+}
+
+.empty-state p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.info-strip {
+  padding-top: 15px;
+}
+
+.info-strip-layout {
+  padding: 27px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.info-strip h2 {
+  font-size: 21px;
+}
+
+.info-strip p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  color: #e0ecf2;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+
+.back-link:hover {
+  color: #fff;
+}
+
+/* صفحة تفاصيل الفعالية */
+.detail-banner .page-banner-inner {
+  min-height: 320px;
+}
+
+.detail-main-card,.detail-sidebar,.story-panel,.mission-card,.member-card,.policy-card,.contact-panel,/* تثبيت معلومات التواصل عند تمرير الصفحة على الشاشات الواسعة */
+.contact-aside {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.detail-main-card {
+  overflow: hidden;
+}
+
+/* الصورة الرئيسية في صفحة تفاصيل الفعالية */
+.detail-cover {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  background: #d4eaf6;
+}
+
+.detail-content {
+  padding: 30px;
+}
+
+.detail-content h2 {
+  font-size: 25px;
+  margin-bottom: 16px;
+}
+
+.detail-content p {
+  font-size: 14px;
+  color: #536c84;
+  line-height: 2.2;
+}
+
+.subheading {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--navy);
+  margin: 25px 0 15px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.benefits-list li {
+  font-size: 14px;
+  color: #4a6178;
+  position: relative;
+  padding-right: 25px;
+}
+
+.benefits-list li:before {
+  content: '✓';
+  color: #138b7a;
+  position: absolute;
+  right: 0;
+  font-weight: 900;
+}
+
+/* الصور الإضافية الخاصة بالفعالية */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* الشريط الذي يعرض تاريخ الفعالية ومكانها وإجراءاتها */
+.detail-sidebar {
+  position: sticky;
+  top: 25px;
+  padding: 25px;
+}
+
+.detail-sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 19px;
+}
+
+.fact-row {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.fact-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #eaf5fb;
+  color: var(--blue);
+  font: 23px Arial,sans-serif;
+}
+
+.fact-row small,.fact-row strong {
+  display: block;
+}
+
+.fact-row small {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.fact-row strong {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.sidebar-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.sidebar-actions button {
+  width: 100%;
+  font-family: inherit;
+}
+
+/* رسائل التأكيد بعد المشاركة أو حفظ ملف التقويم */
+.detail-action-message {
+  background: #e3f6ed;
+  color: #14604e;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.detail-action-message.is-warning {
+  background: #fff2dc;
+  color: #86510f;
+}
+
+.map-preview {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 23px;
+}
+
+.map-preview img {
+  display: block;
+  width: 100%;
+}
+
+.map-note {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.related-section,.team-about-section {
+  background: #fff;
+}
+
+.interest-modal-content {
+  border: 0;
+  border-radius: 17px;
+}
+
+.interest-modal-content .modal-header {
+  background: #eaf4fa;
+}
+
+.interest-modal-content .modal-title {
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.interest-modal-content .modal-body>p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* عن الدليل */
+
+/* صفحة عن الدليل */
+.story-panel {
+  padding: 35px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.story-panel h2 {
+  font-size: clamp(24px,2.8vw,31px);
+  line-height: 1.6;
+  margin: 0 0 17px;
+}
+
+.story-panel p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 2.2;
+}
+
+.mission-stack {
+  height: 100%;
+  display: grid;
+  gap: 16px;
+}
+
+.mission-card {
+  padding: 24px;
+}
+
+.mission-icon {
+  display: grid;
+  place-items: center;
+  background: #e5f5f3;
+  color: #058d7e;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  font-size: 24px;
+}
+
+.mission-card h3 {
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.mission-card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* بطاقات أعضاء الفريق في صفحة عن الدليل */
+.member-card {
+  padding: 21px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform .2s;
+}
+
+.member-card:hover {
+  transform: translateY(-3px);
+}
+
+.avatar {
+  background: linear-gradient(135deg,#d6ecfa,#e7f8ee);
+  border-radius: 15px;
+  color: var(--navy);
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+/* الصور الرمزية لأعضاء الفريق في صفحة عن الدليل */
+.avatar-photo-wrap {
+  border-radius: 50%;
+  border: 2px solid #dbe8f3;
+  box-shadow: 0 8px 20px rgba(19,50,82,.10);
+}
+
+.member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.member-card h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 2px;
+}
+
+.member-card p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.member-task {
+  color: #365473;
+  line-height: 1.9;
+}
+
+.member-data {
+  display: grid;
+  gap: 3px;
+  font-size: 12px;
+  color: #4d6b86;
+}
+
+/* عزل اتجاه كتابة المعرفات الجامعية داخل النص العربي */
+.member-data bdi {
+  font: 12px Consolas,monospace;
+  color: #305b81;
+  white-space: nowrap;
+}
+
+.member-data strong {
+  font-family: Arial,sans-serif;
+}
+
+/* عرض قواعد نشر الفعاليات بنقاط واضحة */
+.policy-card {
+  padding: 27px;
+}
+
+.policy-number {
+  font: 800 34px Arial,sans-serif;
+  color: #75a8c8;
+}
+
+.policy-card h3 {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--navy);
+  margin: 8px 0;
+}
+
+.policy-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 2;
+  margin: 0;
+}
+
+/* تواصل */
+
+/* نموذج وبيانات التواصل */
+.contact-panel,.contact-aside {
+  padding: 31px;
+}
+
+.contact-panel h2,.contact-aside h2 {
+  font-size: 27px;
+  margin: 0 0 10px;
+}
+
+.contact-panel>p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+/* تخصيص ارتفاع مناسب لحقل الرسالة الطويلة */
+.contact-panel textarea.form-control {
+  min-height: 145px;
+}
+
+.required-star {
+  color: #b5304c;
+}
+
+.contact-submit {
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+.contact-aside {
+  position: sticky;
+  top: 20px;
+}
+
+.contact-aside h2 {
+  margin-bottom: 25px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.contact-info-icon {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: #e9f5fb;
+  border-radius: 12px;
+  font-size: 24px;
+  color: var(--navy);
+}
+
+.contact-info-item strong,.contact-info-item a,.contact-info-item div>span,.contact-info-item small {
+  display: block;
+}
+
+.contact-info-item strong {
+  font-size: 13px;
+  color: var(--navy);
+}
+
+.contact-info-item a,.contact-info-item div>span {
+  font-size: 12px;
+  color: #3f6682;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.contact-info-item small {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.small-callout {
+  background: #eaf5fb;
+  padding: 17px;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 2;
+  color: #4c667b;
+}
+
+.small-callout a {
+  color: #17669c;
+  font-weight: 800;
+}
+
+/* إلغاء تثبيت الشريط الجانبي على الشاشات المتوسطة */
+@media (max-width:900px) {
+  .detail-sidebar,.contact-aside {
+    position: static;
+  }
+  .detail-cover {
+    height: 255px;
+  }
+  .banner-decoration {
+    font-size: 80px;
+  }
+}
+
+/* تصغير المسافات وتحويل بعض الشبكات إلى أعمدة للجوال */
+@media (max-width:600px) {
+  .page-banner-inner {
+    min-height: 205px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .page-banner h1 {
+    font-size: 30px;
+  }
+  .page-banner p {
+    font-size: 12px;
+  }
+  .banner-decoration {
+    display: none;
+  }
+  .inner-section {
+    padding: 37px 0;
+  }
+  .filter-panel,.detail-content,.story-panel,.contact-panel,.contact-aside {
+    padding: 21px;
+  }
+  .list-head,.info-strip-layout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .list-head h2 {
+    font-size: 24px;
+  }
+  .filter-actions {
+    justify-content: flex-start;
+  }
+  .detail-cover {
+    height: 205px;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .member-card {
+    padding: 18px;
+  }
+}
