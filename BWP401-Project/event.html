@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="دليل للفعاليات الجامعية والأنشطة الطلابية والورش والمسابقات." name="description"/>
+    <title>تفاصيل الفعاليات | دليل فعاليات الجامعة الافتراضية</title>
+    <link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+    <!-- تحميل خط Cairo المستخدم في صفحات الموقع. -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <!-- ملفات التصميم: Bootstrap أولًا ثم تنسيقات الموقع الخاصة. -->
+    <link href="assets/lib/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/site.css" rel="stylesheet"/>
+    <link href="assets/css/home.css" rel="stylesheet"/>
+    <link href="assets/css/pages.css" rel="stylesheet"/>
+    <!-- تحميل سكربت Bootstrap وملفات JavaScript بعد قراءة الصفحة. -->
+    <script defer="" src="assets/lib/bootstrap.bundle.min.js"></script>
+    <script defer="" src="assets/js/common.js"></script>
+    <script defer="" src="assets/js/data.js"></script>
+    <script defer="" src="assets/js/event.js"></script>
+  </head>
+  <body>
+    <!-- رابط مختصر للوصول مباشرة إلى المحتوى باستخدام لوحة المفاتيح. -->
+    <a class="skip-link" href="#main-content">تجاوز القائمة إلى المحتوى</a>
+    <!-- رأس الموقع المشترك: شعار الجامعة وروابط الصفحات. -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a aria-label="الرئيسية – دليل فعاليات الجامعة الافتراضية" class="brand" href="index.html">
+          <img alt="شعار الجامعة الافتراضية السورية" class="brand-logo" height="50" src="assets/img/svu-logo.png" width="46"/>
+          <span class="brand-text">دليل فعاليات <strong>الجامعة الافتراضية</strong></span>
+        </a>
+        <!-- قائمة التنقل الرئيسية بين الصفحات الخمس. -->
+        <nav aria-label="التنقل الرئيسي" class="site-nav navbar">
+          <a class="nav-link-custom nav-link" href="index.html">الرئيسية</a>
+          <a class="nav-link-custom nav-link" href="events.html">كل الفعاليات</a>
+          <a aria-current="page" class="nav-link-custom nav-link active" href="event.html?id=programming">تفاصيل الفعاليات</a>
+          <a class="nav-link-custom nav-link" href="about.html">عن الدليل</a>
+          <a class="nav-link-custom nav-link" href="contact.html">اتصل بنا</a>
+        </nav>
+      </div>
+    </header>
+    <!-- بداية المحتوى الخاص بهذه الصفحة. -->
+    <main id="main-content">
+      <!-- عنوان الصفحة -->
+      <section class="page-banner detail-banner">
+        <div class="container page-banner-inner">
+          <div>
+            <!-- رابط العودة إلى قائمة جميع الفعاليات. -->
+            <a class="back-link" href="events.html">→ العودة إلى جميع الفعاليات</a>
+            <!-- يقرأ event.js معرّف الفعالية من رابط الصفحة ثم يحدث معلوماتها. -->
+            <span class="banner-overline" id="event-type-label">تقنية</span>
+            <h1 id="detail-title">مسابقة البرمجة الجامعية</h1>
+            <p id="detail-lead">تحديات ممتعة لتنمية مهارات البرمجة والتفكير المنطقي.</p>
+          </div>
+          <div aria-hidden="true" class="banner-decoration">✦</div>
+        </div>
+      </section>
+      <!-- معلومات الفعالية -->
+      <section class="inner-section detail-section">
+        <div class="container">
+          <div class="row g-4 detail-layout">
+            <div class="col-12 col-lg-8">
+              <div class="detail-main-card">
+                <!-- صورة الفعالية الرئيسية مع صورة محلية احتياطية. -->
+                <img alt="طلاب يعملون على حواسيب" class="detail-cover" data-fallback="assets/img/programming.svg" id="detail-image" onerror="this.onerror=null;this.src=this.dataset.fallback" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=1200&amp;q=82"/>
+                <div class="detail-content">
+                  <span class="eyebrow">عن الفعالية</span>
+                  <h2>تفاصيل الفعالية</h2>
+                  <!-- الوصف المفصل يتم تحديثه حسب الفعالية المختارة. -->
+                  <div id="detail-description">
+                    <p>تتناول هذه المسابقة تحديات في المنطق والبرمجة وحل المشكلات ضمن أجواء تعليمية تنافسية.</p>
+                  </div>
+                  <h3 class="subheading">ما الذي ستستفيده؟</h3>
+                  <!-- قائمة الفوائد تختلف حسب بيانات كل فعالية. -->
+                  <ul class="benefits-list" id="detail-benefits">
+                    <li>تجربة عملية ممتعة</li>
+                    <li>تبادل الخبرات بين الطلاب</li>
+                  </ul>
+                  <h3 class="subheading">صور من أجواء الأنشطة</h3>
+                  <!-- معرض صغير لصور الفعالية. -->
+                  <div class="gallery-grid">
+                    <img alt="الفعالية – صورة أول" data-fallback="assets/img/programming.svg" id="gallery-main" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=1200&amp;q=82"/>
+                    <img alt="صورة أخرى مرتبطة بالفعاليات" data-fallback="assets/img/ai.svg" id="gallery-related" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="https://images.unsplash.com/photo-1758270705317-3ef6142d306f?auto=format&amp;fit=crop&amp;w=1200&amp;q=82"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <!-- العمود الجانبي لتاريخ الفعالية وموقعها وتصنيفها. -->
+              <aside aria-label="ملخص معلومات الفعالية" class="detail-sidebar">
+                <h2>معلومات الفعالية</h2>
+                <div class="fact-row"><span aria-hidden="true" class="fact-icon">◷</span><span><small>التاريخ</small><strong id="detail-date">18 نوفمبر 2026</strong></span></div>
+                <div class="fact-row"><span aria-hidden="true" class="fact-icon">⌖</span><span><small>الموقع</small><strong id="detail-location">عبر الإنترنت</strong></span></div>
+                <div class="fact-row"><span aria-hidden="true" class="fact-icon">▤</span><span><small>التصنيف</small><strong id="detail-category">تقنية</strong></span></div>
+                <!-- أزرار التقويم والمشاركة ونافذة تسجيل الاهتمام. -->
+                <div class="sidebar-actions">
+                  <button class="button button-primary" id="calendar-button" type="button">▦ أضف إلى التقويم</button>
+                  <button class="button button-ghost" id="share-button" type="button">↗ شارك الفعالية</button>
+                  <button class="button button-outline" data-bs-target="#interest-modal" data-bs-toggle="modal" id="interest-button" type="button">سجّل اهتمامك</button>
+                </div>
+                <!-- موضع عرض رسائل نتيجة إجراءات المستخدم. -->
+                <div aria-live="polite" class="detail-action-message d-none" id="detail-action-message" role="status"></div>
+                <!-- صورة المخطط الموجودة مع معلومات مكان الفعالية. -->
+                <div aria-label="مخطط مكان الفعالية" class="map-preview" role="img">
+                  <img alt="مخطط للموقع" loading="lazy" src="assets/img/location-map.svg"/>
+                </div>
+                <p class="map-note" id="map-note">التفاصيل الخاصة بالمكان تجدها ضمن معلومات الفعالية.</p>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- فعاليات ذات صلة -->
+      <section class="inner-section related-section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">قد تهمك أيضًا</span>
+              <h2>فعاليات ذات صلة</h2>
+              <p>اكتشف أنشطة أخرى في الدليل.</p>
+            </div>
+            <a class="section-link" href="events.html">كل الفعاليات ↗</a>
+          </div>
+          <!-- بطاقات الفعاليات المرتبطة يضيفها event.js هنا. -->
+          <div class="row g-4" id="related-events"></div>
+        </div>
+      </section>
+      <!-- نافذة Bootstrap لتسجيل الاهتمام بالفعالية. -->
+      <div aria-hidden="true" aria-labelledby="interest-modal-label" class="modal fade" id="interest-modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content interest-modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="interest-modal-label">تسجيل الاهتمام</h2>
+              <button aria-label="إغلاق" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+              <p>اكتب اسمك لحفظ حالة الاهتمام خلال زيارة الصفحة.</p>
+              <!-- إدخال الاسم وتسجيل الاهتمام داخل الصفحة. -->
+              <form id="interest-form">
+                <div class="mb-3">
+                  <label class="form-label" for="interest-name">اسمك</label>
+                  <input class="form-control" id="interest-name" maxlength="80" placeholder="أدخل اسمك" required=""/>
+                </div>
+                <button class="button button-primary" type="submit">تأكيد الاهتمام</button>
+              </form>
+              <!-- رسالة تأكيد الاهتمام داخل النافذة. -->
+              <div class="alert alert-success mt-3 d-none" id="interest-alert" role="status"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- تذييل مشترك يحتوي الروابط ووسائل التواصل. -->
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div>
+          <a class="footer-brand" href="index.html">
+            <img alt="شعار الجامعة الافتراضية السورية" class="footer-logo" height="46" src="assets/img/svu-logo.png" width="42"/>
+            <span>دليل فعاليات الجامعة الافتراضية</span>
+          </a>
+          <p>دليل للأنشطة والفعاليات الطلابية، من إعداد فريق مقرر BWP401.</p>
+        </div>
+        <div>
+                    <h2>روابط سريعة</h2>
+          <a href="index.html">الرئيسية</a>
+          <a href="events.html">الفعاليات</a>
+          <a href="event.html?id=programming">تفاصيل الفعاليات</a>
+          <a href="about.html">عن الدليل</a>
+          <a href="contact.html">اتصل بنا</a>
+        </div>
+        <div>
+          <h2>التواصل</h2>
+          <span>تابع الأخبار والإعلانات عبر قنوات الجامعة.</span>
+          <a href="contact.html">صفحة التواصل ↗</a>
+          <div aria-label="روابط الجامعة الافتراضية السورية" class="footer-social">
+            <a href="https://www.facebook.com/svuonline.org" rel="noopener noreferrer" target="_blank">فيسبوك ↗</a>
+            <a href="https://www.linkedin.com/company/syrianvirtualuniversity" rel="noopener noreferrer" target="_blank">لينكدإن ↗</a>
+            <a href="https://t.me/Syrianvirtualuniversity" rel="noopener noreferrer" target="_blank">تلغرام ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom"><span>© 2026 – مشروع BWP401</span><span>تنفيذ فريق الطلاب الخمسة</span></div>
+    </footer>
+    <!-- زر العودة للأعلى، والتحكم فيه موجود في common.js. -->
+    <button aria-label="العودة إلى أعلى الصفحة" class="to-top" id="to-top" title="العودة إلى أعلى الصفحة" type="button">↑</button>
+  </body>
+</html>

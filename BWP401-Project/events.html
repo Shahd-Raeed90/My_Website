@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="دليل للفعاليات الجامعية والأنشطة الطلابية والورش والمسابقات." name="description"/>
+    <title>جميع الفعاليات | دليل فعاليات الجامعة الافتراضية</title>
+    <link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+    <!-- تحميل خط Cairo المستخدم في صفحات الموقع. -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <!-- ملفات التصميم: Bootstrap أولًا ثم تنسيقات الموقع الخاصة. -->
+    <link href="assets/lib/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/site.css" rel="stylesheet"/>
+    <link href="assets/css/home.css" rel="stylesheet"/>
+    <link href="assets/css/pages.css" rel="stylesheet"/>
+    <!-- تحميل سكربت Bootstrap وملفات JavaScript بعد قراءة الصفحة. -->
+    <script defer="" src="assets/lib/bootstrap.bundle.min.js"></script>
+    <script defer="" src="assets/js/common.js"></script>
+    <script defer="" src="assets/js/events.js"></script>
+  </head>
+  <body>
+    <!-- رابط مختصر للوصول مباشرة إلى المحتوى باستخدام لوحة المفاتيح. -->
+    <a class="skip-link" href="#main-content">تجاوز القائمة إلى المحتوى</a>
+    <!-- رأس الموقع المشترك: شعار الجامعة وروابط الصفحات. -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a aria-label="الرئيسية – دليل فعاليات الجامعة الافتراضية" class="brand" href="index.html">
+          <img alt="شعار الجامعة الافتراضية السورية" class="brand-logo" height="50" src="assets/img/svu-logo.png" width="46"/>
+          <span class="brand-text">دليل فعاليات <strong>الجامعة الافتراضية</strong></span>
+        </a>
+        <!-- قائمة التنقل الرئيسية بين الصفحات الخمس. -->
+        <nav aria-label="التنقل الرئيسي" class="site-nav navbar">
+          <a class="nav-link-custom nav-link" href="index.html">الرئيسية</a>
+          <a aria-current="page" class="nav-link-custom nav-link active" href="events.html">كل الفعاليات</a>
+          <a class="nav-link-custom nav-link" href="event.html?id=programming">تفاصيل الفعاليات</a>
+          <a class="nav-link-custom nav-link" href="about.html">عن الدليل</a>
+          <a class="nav-link-custom nav-link" href="contact.html">اتصل بنا</a>
+        </nav>
+      </div>
+    </header>
+    <!-- بداية المحتوى الخاص بهذه الصفحة. -->
+    <main id="main-content">
+      <!-- عنوان الصفحة -->
+      <section class="page-banner">
+        <div class="container page-banner-inner">
+          <div>
+            <span class="banner-overline">استكشف كل جديد</span>
+            <h1>جميع الفعاليات</h1>
+            <p>ورشة، مسابقة، أو تحدٍّ ممتع: تصفّح الفعاليات واختر ما يناسبك.</p>
+          </div>
+          <div aria-hidden="true" class="banner-decoration">✧ <span>◈</span></div>
+        </div>
+      </section>
+      <!-- خيارات البحث والفلترة -->
+      <section aria-labelledby="filter-title" class="inner-section filter-section">
+        <div class="container">
+          <div class="section-heading compact">
+            <div>
+              <span class="eyebrow">اعثر على ما يهمك</span>
+              <h2 id="filter-title">ابحث وصفِّ النتائج</h2>
+              <p>يمكنك الجمع بين أكثر من معيار للحصول على نتائج دقيقة.</p>
+            </div>
+          </div>
+          <!-- نموذج البحث: جميع الحقول مرتبطة بدالة فلترة واحدة في events.js. -->
+          <form autocomplete="off" class="filter-panel" id="filter-form" role="search">
+            <div class="row g-3">
+              <div class="col-12 col-lg-6">
+                <label class="form-label" for="event-search">اسم الفعالية أو وصفها</label>
+                <!-- حقل البحث النصي في أسماء الفعاليات وأوصافها. -->
+                <input class="form-control" id="event-search" placeholder="مثال: برمجة أو شطرنج" type="search"/>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <label class="form-label" for="event-category">التصنيف</label>
+                <!-- القيم الإنجليزية للتصنيفات تطابق data-category في البطاقات. -->
+                <select class="form-select" id="event-category">
+                  <option value="all">جميع التصنيفات</option>
+                  <option value="tech">تقنية</option>
+                  <option value="workshop">ورش عمل</option>
+                  <option value="sports">رياضة</option>
+                </select>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3">
+                <label class="form-label" for="event-location">الموقع</label>
+                <!-- فلتر مكان الفعالية: عبر الإنترنت أو حضوري. -->
+                <select class="form-select" id="event-location">
+                  <option value="all">جميع المواقع</option>
+                  <option value="online">عبر الإنترنت</option>
+                  <option value="onsite">حضوري</option>
+                </select>
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label" for="event-date">التاريخ المحدد</label>
+                <!-- قائمة تواريخ الفعاليات بدل حقل التقويم. -->
+                <select aria-label="التاريخ المحدد" class="form-select" id="event-date">
+                  <option value="">جميع التواريخ</option>
+                  <option value="2026-11-18">18 نوفمبر 2026</option>
+                  <option value="2026-11-21">21 نوفمبر 2026</option>
+                  <option value="2026-11-25">25 نوفمبر 2026</option>
+                  <option value="2026-11-29">29 نوفمبر 2026</option>
+                </select>
+                <small class="field-hint">اختر تاريخًا محددًا أو اترك الخيار على جميع التواريخ.</small>
+              </div>
+              <div class="col-12 col-lg-6 filter-actions">
+                <!-- إعادة ضبط جميع حقول البحث والفلترة. -->
+                <button class="button button-ghost" id="reset-filters" type="reset">↺ مسح جميع الفلاتر</button>
+                <span class="filter-hint">تتحدث النتائج تلقائيًا عند التغيير</span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- بطاقات الفعاليات -->
+      <section aria-labelledby="list-title" class="inner-section listing-section">
+        <div class="container">
+          <div class="list-head">
+            <div>
+              <span class="eyebrow">فعاليات مختارة</span>
+              <h2 id="list-title">الفعاليات المتاحة</h2>
+            </div>
+            <!-- عدد النتائج الظاهرة يتغير تلقائيًا عند الفلترة. -->
+            <p aria-live="polite" class="result-count" id="events-count" role="status">يتم عرض 4 من 4 فعاليات</p>
+          </div>
+          <!-- شبكة بطاقات الفعاليات الأربع. -->
+          <div class="row g-4" id="events-list">
+            <!-- بيانات كل بطاقة مستخدمة للمقارنة حسب التصنيف والتاريخ والمكان. -->
+            <div class="col-12 col-md-6 col-xl-3 event-column" data-category="tech" data-date="2026-11-18" data-location="online">
+              <article class="event-card card h-100">
+                <img alt="صورة: مسابقة البرمجة الجامعية" data-fallback="assets/img/programming.svg" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=1200&amp;q=82"/>
+                <div class="event-card-body">
+                  <span class="event-category">تقنية</span>
+                  <h3>مسابقة البرمجة الجامعية</h3>
+                  <p>تحديات منطقية لاختبار مهارات التفكير الخوارزمي والعمل الجماعي.</p>
+                  <div class="event-meta"><span>◷ 18 نوفمبر 2026</span><span>⌖ عبر الإنترنت</span></div>
+                  <a class="event-more" href="event.html?id=programming">عرض التفاصيل <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 event-column" data-category="workshop" data-date="2026-11-21" data-location="online">
+              <article class="event-card card h-100">
+                <img alt="صورة: ورشة الذكاء الاصطناعي" data-fallback="assets/img/ai.svg" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="https://images.unsplash.com/photo-1758270705317-3ef6142d306f?auto=format&amp;fit=crop&amp;w=1200&amp;q=82"/>
+                <div class="event-card-body">
+                  <span class="event-category">ورش عمل</span>
+                  <h3>ورشة الذكاء الاصطناعي</h3>
+                  <p>تعرّف إلى المفاهيم الأساسية للذكاء الاصطناعي وتطبيقاته في الدراسة.</p>
+                  <div class="event-meta"><span>◷ 21 نوفمبر 2026</span><span>⌖ عبر الإنترنت</span></div>
+                  <a class="event-more" href="event.html?id=ai">عرض التفاصيل <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 event-column" data-category="sports" data-date="2026-11-25" data-location="online">
+              <article class="event-card card h-100">
+                <img alt="صورة: بطولة الشطرنج" data-fallback="assets/img/chess.svg" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="https://images.unsplash.com/photo-1750650537247-f68ded1a9320?auto=format&amp;fit=crop&amp;w=1200&amp;q=82"/>
+                <div class="event-card-body">
+                  <span class="event-category">رياضة</span>
+                  <h3>بطولة الشطرنج</h3>
+                  <p>منافسات ودية لتنمية التفكير الاستراتيجي والتركيز وروح المنافسة.</p>
+                  <div class="event-meta"><span>◷ 25 نوفمبر 2026</span><span>⌖ عبر الإنترنت</span></div>
+                  <a class="event-more" href="event.html?id=chess">عرض التفاصيل <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            </div>
+            <!-- ورشة الأمن السيبراني مصنفة ضمن ورش العمل. -->
+            <div class="col-12 col-md-6 col-xl-3 event-column" data-category="workshop" data-date="2026-11-29" data-location="onsite">
+              <article class="event-card card h-100">
+                <img alt="صورة: ورشة الأمن السيبراني" data-fallback="assets/img/cyber.svg" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="https://images.unsplash.com/photo-1763568258143-904ea924ac53?auto=format&amp;fit=crop&amp;w=1200&amp;q=82"/>
+                <div class="event-card-body">
+                  <span class="event-category">ورش عمل</span>
+                  <h3>ورشة الأمن السيبراني</h3>
+                  <p>تعرّف إلى أسس حماية الحسابات والبيانات والممارسات الآمنة رقميًا.</p>
+                  <div class="event-meta"><span>◷ 29 نوفمبر 2026</span><span>⌖ حضوري – قاعة الأنشطة</span></div>
+                  <a class="event-more" href="event.html?id=cyber">عرض التفاصيل <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- رسالة عدم وجود نتائج؛ يعرضها JavaScript عند اختفاء كل البطاقات. -->
+          <div aria-live="polite" class="empty-state d-none" id="no-results" role="status">
+            <span aria-hidden="true" class="empty-icon">⌕</span>
+            <h3>لا توجد فعاليات مطابقة</h3>
+            <p>جرّب تغيير التاريخ أو التصنيف أو نص البحث.</p>
+            <button class="button button-primary" id="empty-reset" type="button">عرض جميع الفعاليات</button>
+          </div>
+        </div>
+      </section>
+      <!-- قسم إرشادي أسفل قائمة الفعاليات. -->
+      <section class="inner-section info-strip">
+        <div class="container info-strip-layout">
+          <div>
+            <h2>ما لقيت فعالية مناسبة؟</h2>
+            <p>تابع قسم الفعاليات بانتظام للاطلاع على الأنشطة القادمة.</p>
+          </div>
+          <a class="button button-primary" href="about.html">تعرّف إلى الدليل ↗</a>
+        </div>
+      </section>
+    </main>
+    <!-- تذييل مشترك يحتوي الروابط ووسائل التواصل. -->
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div>
+          <a class="footer-brand" href="index.html">
+            <img alt="شعار الجامعة الافتراضية السورية" class="footer-logo" height="46" src="assets/img/svu-logo.png" width="42"/>
+            <span>دليل فعاليات الجامعة الافتراضية</span>
+          </a>
+          <p>دليل للأنشطة والفعاليات الطلابية، من إعداد فريق مقرر BWP401.</p>
+        </div>
+        <div>
+                    <h2>روابط سريعة</h2>
+          <a href="index.html">الرئيسية</a>
+          <a href="events.html">الفعاليات</a>
+          <a href="event.html?id=programming">تفاصيل الفعاليات</a>
+          <a href="about.html">عن الدليل</a>
+          <a href="contact.html">اتصل بنا</a>
+        </div>
+        <div>
+          <h2>التواصل</h2>
+          <span>تابع الأخبار والإعلانات عبر قنوات الجامعة.</span>
+          <a href="contact.html">صفحة التواصل ↗</a>
+          <div aria-label="روابط الجامعة الافتراضية السورية" class="footer-social">
+            <a href="https://www.facebook.com/svuonline.org" rel="noopener noreferrer" target="_blank">فيسبوك ↗</a>
+            <a href="https://www.linkedin.com/company/syrianvirtualuniversity" rel="noopener noreferrer" target="_blank">لينكدإن ↗</a>
+            <a href="https://t.me/Syrianvirtualuniversity" rel="noopener noreferrer" target="_blank">تلغرام ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom"><span>© 2026 – مشروع BWP401</span><span>تنفيذ فريق الطلاب الخمسة</span></div>
+    </footer>
+    <!-- زر العودة للأعلى، والتحكم فيه موجود في common.js. -->
+    <button aria-label="العودة إلى أعلى الصفحة" class="to-top" id="to-top" title="العودة إلى أعلى الصفحة" type="button">↑</button>
+  </body>
+</html>
